@@ -1,10 +1,11 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
+import dayjs from "dayjs";
 
 export default function Today({covid}) {
   return (
     <View style={styles.container}>
-      <Text style={styles.dateText}>Ažurirano: {covid.date}</Text>
+      <Text style={styles.dateText}>Ažurirano: {dayjs(covid.date).format('DD.MM.YYYY HH:mm')}</Text>
       <Text style={styles.todayTitle}>DANAS</Text>
       <View style={styles.todayContainer}>
         <View style={styles.todayCured}>
