@@ -27,7 +27,6 @@ export default function Today({covid}) {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     alignItems: "center",
   },
   dateText: {
@@ -41,7 +40,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   todayContainer: {
-    backgroundColor: "#4F7EFA",
+    backgroundColor: "#626FEA",
     flexDirection: "row",
     justifyContent: "space-around",
     width: "85%",
@@ -63,16 +62,16 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   textCured: {
-    color: '#000',
+    color: "#000",
     fontSize: 22,
   },
   textNewCases: {
-    color: '#000',
+    color: "#000",
     fontSize: 26,
-    fontWeight: 'bold'
+    fontWeight: "bold",
   },
   textDeaths: {
-    color: '#000',
+    color: "#000",
     fontSize: 22,
   },
 });
