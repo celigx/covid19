@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
   },
   textTitle: {
     fontSize: 18,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginBottom: 10,
   },
   textSubTitle: {
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   text: {
-    color: "#FF5763",
+    color: "#626FEA",
     fontSize: 18,
     fontWeight: "bold",
   },
