@@ -2,6 +2,11 @@ import React from "react";
 import { StyleSheet, View, Text } from "react-native";
 
 export default function GlobalCases({ covid }) {
+  // Add spaces to numbers
+  const formatNumber = (x) => {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+  }
+
   return (
     <View style={styles.container}>
       <View style={{alignItems:'center'}}>
@@ -10,11 +15,11 @@ export default function GlobalCases({ covid }) {
       <View style={styles.containerCases}>
         <View>
           <Text style={styles.textSubTitle}>Potvrđeni slučajevi</Text>
-          <Text style={styles.text}>{covid.casesGlobal}</Text>
+          <Text style={styles.text}>{formatNumber(covid.casesGlobal)}</Text>
         </View>
         <View>
           <Text style={styles.textSubTitle}>Potvrđeni umrli</Text>
-          <Text style={styles.text}>{covid.deathsGlobal}</Text>
+          <Text style={styles.text}>{formatNumber(covid.deathsGlobal)}</Text>
         </View>
       </View>
     </View>
