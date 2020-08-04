@@ -4,6 +4,7 @@ import { StyleSheet, View } from 'react-native';
 import Constants from "expo-constants";
 import Today from './components/Today';
 import Chart from './components/Chart';
+import GlobalCases from "./components/GlobalCases";
 
 
 export default function App() {
@@ -38,7 +39,9 @@ export default function App() {
           date: data[0].Datum,
           curedLocal: data[0].IzlijeceniHrvatska - data[1].IzlijeceniHrvatska,
           casesLocal: data[0].SlucajeviHrvatska - data[1].SlucajeviHrvatska,
-          deathsLocal: data[0].UmrliHrvatska - data[1].UmrliHrvatska
+          deathsLocal: data[0].UmrliHrvatska - data[1].UmrliHrvatska,
+          casesGlobal: data[0].SlucajeviSvijet,
+          deathsGlobal: data[0].UmrliSvijet
         })
         setStats({
           one: data[1].IzlijeceniHrvatska - data[2].IzlijeceniHrvatska,
@@ -56,6 +59,7 @@ export default function App() {
     <View style={styles.container}>
       <Today covid={covid} />
       <Chart stats={stats} />
+      <GlobalCases covid={covid} />
       <StatusBar style="light" />
     </View>
   );
@@ -64,9 +68,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // backgroundColor: "#0F0F0F",
     backgroundColor: "#1D1773",
-    // backgroundColor: "#232946",
     alignItems: "center",
     paddingTop: Constants.statusBarHeight,
   },
