@@ -34,10 +34,10 @@ export default function Chart({ stats }) {
           style={{
             tickLabels: {
               fontSize: 12,
-              fill: "#fff",
+              fill: "#F3F3F4",
             },
             axis: {
-              stroke: "#fff",
+              stroke: "#F3F3F4",
             },
           }}
         />
@@ -45,10 +45,10 @@ export default function Chart({ stats }) {
           style={{
             tickLabels: {
               fontSize: 12,
-              fill: "#fff",
+              fill: "#F3F3F4",
             },
             axis: {
-              stroke: "#fff",
+              stroke: "#F3F3F4",
             },
           }}
         />
@@ -56,15 +56,15 @@ export default function Chart({ stats }) {
           data={data}
           x="date"
           y="cases"
-          labelComponent={<VictoryLabel style={{ fill: "#fff" }} />}
+          labelComponent={<VictoryLabel style={{ fill: "#F3F3F4" }} />}
           labels={data.map((label) => label.cases)}
           style={{
             data: {
               fill: "#626FEA",
-              color: "#fff",
+              color: "#F3F3F4",
             },
             labels: {
-              fill: "#fff",
+              fill: "#F3F3F4",
             },
           }}
         />

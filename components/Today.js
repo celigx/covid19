@@ -30,17 +30,17 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   dateText: {
-    color: "#fff",
+    color: "#F3F3F4",
     marginTop: 10,
     marginBottom: 20,
   },
   todayTitle: {
-    color: "#fff",
+    color: "#F3F3F4",
     fontSize: 22,
     marginBottom: 10,
   },
   todayContainer: {
-    backgroundColor: "#626FEA",
+    backgroundColor: "#171C26",
     flexDirection: "row",
     justifyContent: "space-around",
     width: "85%",
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     paddingVertical: 30,
   },
   text: {
-    color: "#fff",
+    color: "#F3F3F4",
     fontSize: 16,
     paddingBottom: 10,
   },
@@ -62,16 +62,16 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   textCured: {
-    color: "#000",
+    color: "#F3F3F4",
     fontSize: 22,
   },
   textNewCases: {
-    color: "#000",
+    color: "#F3F3F4",
     fontSize: 26,
     fontWeight: "bold",
   },
   textDeaths: {
-    color: "#000",
+    color: "#F3F3F4",
     fontSize: 22,
   },
 });

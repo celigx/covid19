@@ -28,7 +28,7 @@ export default function GlobalCases({ covid }) {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#E9E9E9",
+    backgroundColor: "#171C26",
     width: "95%",
     borderRadius: 15,
     paddingVertical: 25,
@@ -39,17 +39,18 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
   },
   textTitle: {
+    color: "#F3F3F4",
     fontSize: 18,
     fontWeight: "bold",
     marginBottom: 10,
   },
   textSubTitle: {
-    color: "#394359",
+    color: "#F3F3F4",
     fontSize: 16,
-    fontWeight: "bold",
+    paddingBottom: 10,
   },
   text: {
-    color: "#626FEA",
+    color: "#F3F3F4",
     fontSize: 18,
     fontWeight: "bold",
   },
