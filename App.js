@@ -44,13 +44,13 @@ export default function App() {
           deathsGlobal: data[0].UmrliSvijet
         })
         setStats({
-          one: data[1].IzlijeceniHrvatska - data[2].IzlijeceniHrvatska,
-          two: data[2].IzlijeceniHrvatska - data[3].IzlijeceniHrvatska,
-          three: data[4].IzlijeceniHrvatska - data[5].IzlijeceniHrvatska,
-          four: data[5].IzlijeceniHrvatska - data[6].IzlijeceniHrvatska,
-          five: data[6].IzlijeceniHrvatska - data[7].IzlijeceniHrvatska,
-          six: data[7].IzlijeceniHrvatska - data[8].IzlijeceniHrvatska,
-          seven: data[8].IzlijeceniHrvatska - data[9].IzlijeceniHrvatska,
+          one: data[1].SlucajeviHrvatska - data[2].SlucajeviHrvatska,
+          two: data[2].SlucajeviHrvatska - data[3].SlucajeviHrvatska,
+          three: data[4].SlucajeviHrvatska - data[5].SlucajeviHrvatska,
+          four: data[5].SlucajeviHrvatska - data[6].SlucajeviHrvatska,
+          five: data[6].SlucajeviHrvatska - data[7].SlucajeviHrvatska,
+          six: data[7].SlucajeviHrvatska - data[8].SlucajeviHrvatska,
+          seven: data[8].SlucajeviHrvatska - data[9].SlucajeviHrvatska,
         });
       });
   };
