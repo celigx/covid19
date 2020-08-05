@@ -46,9 +46,9 @@ export default function App() {
         setStats({
           one: data[1].SlucajeviHrvatska - data[2].SlucajeviHrvatska,
           two: data[2].SlucajeviHrvatska - data[3].SlucajeviHrvatska,
-          three: data[4].SlucajeviHrvatska - data[5].SlucajeviHrvatska,
-          four: data[5].SlucajeviHrvatska - data[6].SlucajeviHrvatska,
-          five: data[6].SlucajeviHrvatska - data[7].SlucajeviHrvatska,
+          three: data[3].SlucajeviHrvatska - data[4].SlucajeviHrvatska,
+          four: data[4].SlucajeviHrvatska - data[5].SlucajeviHrvatska,
+          five: data[5].SlucajeviHrvatska - data[6].SlucajeviHrvatska,
           six: data[7].SlucajeviHrvatska - data[8].SlucajeviHrvatska,
           seven: data[8].SlucajeviHrvatska - data[9].SlucajeviHrvatska,
         });
