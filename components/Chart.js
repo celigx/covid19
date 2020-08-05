@@ -4,15 +4,15 @@ import dayjs from "dayjs";
 import { VictoryBar, VictoryChart, VictoryAxis, VictoryLabel } from "victory-native";
 
 
-export default function Chart({ stats }) {
+export default function Chart({ covid, stats }) {
   const date = {
-    one: dayjs().subtract(1, "day").format("DD.MM"),
-    two: dayjs().subtract(2, "day").format("DD.MM"),
-    three: dayjs().subtract(3, "day").format("DD.MM"),
-    four: dayjs().subtract(4, "day").format("DD.MM"),
-    five: dayjs().subtract(5, "day").format("DD.MM"),
-    six: dayjs().subtract(6, "day").format("DD.MM"),
-    seven: dayjs().subtract(7, "day").format("DD.MM"),
+    one: dayjs(covid.date).subtract(1, "day").format("DD.MM"),
+    two: dayjs(covid.date).subtract(2, "day").format("DD.MM"),
+    three: dayjs(covid.date).subtract(3, "day").format("DD.MM"),
+    four: dayjs(covid.date).subtract(4, "day").format("DD.MM"),
+    five: dayjs(covid.date).subtract(5, "day").format("DD.MM"),
+    six: dayjs(covid.date).subtract(6, "day").format("DD.MM"),
+    seven: dayjs(covid.date).subtract(7, "day").format("DD.MM"),
   };
 
   const data = [

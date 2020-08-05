@@ -58,7 +58,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Today covid={covid} />
-      <Chart stats={stats} />
+      <Chart covid={covid} stats={stats} />
       <GlobalCases covid={covid} />
       <StatusBar style="light" />
     </View>
