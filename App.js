@@ -17,6 +17,7 @@ export default function App() {
     casesGlobal: '',
     deathsLocalToday: '',
     deathsGlobal: '',
+    curedLocal: '',
     casesLocal: '',
     deathsLocal: ''
   })
@@ -43,6 +44,7 @@ export default function App() {
           curedLocalToday: data[0].IzlijeceniHrvatska - data[1].IzlijeceniHrvatska,
           casesLocalToday: data[0].SlucajeviHrvatska - data[1].SlucajeviHrvatska,
           deathsLocalToday: data[0].UmrliHrvatska - data[1].UmrliHrvatska,
+          curedLocal: data[0].IzlijeceniHrvatska,
           casesLocal: data[0].SlucajeviHrvatska,
           deathsLocal: data[0].UmrliHrvatska,
           casesGlobal: data[0].SlucajeviSvijet,

@@ -14,11 +14,15 @@ export default function LocalCases({ covid }) {
       </View>
       <View style={styles.containerCases}>
         <View>
-          <Text style={styles.textSubTitle}>Potvrđeni slučajevi</Text>
+          <Text style={styles.textSubTitle}>Slučajevi</Text>
           <Text style={styles.text}>{formatNumber(covid.casesLocal)}</Text>
         </View>
         <View>
-          <Text style={styles.textSubTitle}>Potvrđeni umrli</Text>
+          <Text style={styles.textSubTitle}>Oporavljeni</Text>
+          <Text style={styles.text}>{formatNumber(covid.curedLocal)}</Text>
+        </View>
+        <View>
+          <Text style={styles.textSubTitle}>Preminuli</Text>
           <Text style={styles.text}>{formatNumber(covid.deathsLocal)}</Text>
         </View>
       </View>
