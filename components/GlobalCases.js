@@ -9,16 +9,20 @@ export default function GlobalCases({ covid }) {
 
   return (
     <View style={styles.container}>
-      <View style={{alignItems:'center'}}>
+      <View style={{ alignItems: "center" }}>
         <Text style={styles.textTitle}>Svijet</Text>
       </View>
       <View style={styles.containerCases}>
         <View>
-          <Text style={styles.textSubTitle}>Potvrđeni slučajevi</Text>
+          <Text style={styles.textSubTitle}>Slučajevi</Text>
           <Text style={styles.text}>{formatNumber(covid.casesGlobal)}</Text>
         </View>
         <View>
-          <Text style={styles.textSubTitle}>Potvrđeni umrli</Text>
+          <Text style={styles.textSubTitle}>Oporavljeni</Text>
+          <Text style={styles.text}>{formatNumber(covid.curedGlobal)}</Text>
+        </View>
+        <View>
+          <Text style={styles.textSubTitle}>Preminuli</Text>
           <Text style={styles.text}>{formatNumber(covid.deathsGlobal)}</Text>
         </View>
       </View>

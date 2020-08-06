@@ -12,10 +12,10 @@ export default function App() {
   const [covid, setCovid] = useState({
     date: '',
     curedLocalToday: '',
-    curedGlobal: '',
     casesLocalToday: '',
-    casesGlobal: '',
     deathsLocalToday: '',
+    curedGlobal: '',
+    casesGlobal: '',
     deathsGlobal: '',
     curedLocal: '',
     casesLocal: '',
@@ -47,6 +47,7 @@ export default function App() {
           curedLocal: data[0].IzlijeceniHrvatska,
           casesLocal: data[0].SlucajeviHrvatska,
           deathsLocal: data[0].UmrliHrvatska,
+          curedGlobal: data[0].IzlijeceniSvijet,
           casesGlobal: data[0].SlucajeviSvijet,
           deathsGlobal: data[0].UmrliSvijet
         })
