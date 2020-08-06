@@ -1,25 +1,25 @@
 import React from "react";
 import { StyleSheet, View, Text } from "react-native";
 
-export default function GlobalCases({ covid }) {
+export default function LocalCases({ covid }) {
   // Add spaces to numbers
   const formatNumber = (x) => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-  }
+  };
 
   return (
     <View style={styles.container}>
-      <View style={{alignItems:'center'}}>
-        <Text style={styles.textTitle}>Svijet</Text>
+      <View style={{ alignItems: "center" }}>
+        <Text style={styles.textTitle}>Hrvatska</Text>
       </View>
       <View style={styles.containerCases}>
         <View>
           <Text style={styles.textSubTitle}>Potvrđeni slučajevi</Text>
-          <Text style={styles.text}>{formatNumber(covid.casesGlobal)}</Text>
+          <Text style={styles.text}>{formatNumber(covid.casesLocal)}</Text>
         </View>
         <View>
           <Text style={styles.textSubTitle}>Potvrđeni umrli</Text>
-          <Text style={styles.text}>{formatNumber(covid.deathsGlobal)}</Text>
+          <Text style={styles.text}>{formatNumber(covid.deathsLocal)}</Text>
         </View>
       </View>
     </View>
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     width: "95%",
     borderRadius: 15,
     paddingVertical: 25,
-    marginVertical: 20,
+    marginTop: 20,
   },
   containerCases: {
     flexDirection: "row",

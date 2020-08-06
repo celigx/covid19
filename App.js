@@ -1,21 +1,24 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, ScrollView } from 'react-native';
 import Constants from "expo-constants";
 import Today from './components/Today';
 import Chart from './components/Chart';
 import GlobalCases from "./components/GlobalCases";
+import LocalCases from './components/LocalCases';
 
 
 export default function App() {
   const [covid, setCovid] = useState({
     date: '',
-    curedLocal: '',
+    curedLocalToday: '',
     curedGlobal: '',
-    casesLocal: '',
+    casesLocalToday: '',
     casesGlobal: '',
-    deathsLocal: '',
-    deathsGlobal: ''
+    deathsLocalToday: '',
+    deathsGlobal: '',
+    casesLocal: '',
+    deathsLocal: ''
   })
   const [stats, setStats] = useState({
     one: '',
@@ -37,9 +40,11 @@ export default function App() {
       .then((data) => {
         setCovid({
           date: data[0].Datum,
-          curedLocal: data[0].IzlijeceniHrvatska - data[1].IzlijeceniHrvatska,
-          casesLocal: data[0].SlucajeviHrvatska - data[1].SlucajeviHrvatska,
-          deathsLocal: data[0].UmrliHrvatska - data[1].UmrliHrvatska,
+          curedLocalToday: data[0].IzlijeceniHrvatska - data[1].IzlijeceniHrvatska,
+          casesLocalToday: data[0].SlucajeviHrvatska - data[1].SlucajeviHrvatska,
+          deathsLocalToday: data[0].UmrliHrvatska - data[1].UmrliHrvatska,
+          casesLocal: data[0].SlucajeviHrvatska,
+          deathsLocal: data[0].UmrliHrvatska,
           casesGlobal: data[0].SlucajeviSvijet,
           deathsGlobal: data[0].UmrliSvijet
         })
@@ -56,12 +61,15 @@ export default function App() {
   };
 
   return (
-    <View style={styles.container}>
-      <Today covid={covid} />
-      <Chart covid={covid} stats={stats} />
-      <GlobalCases covid={covid} />
-      <StatusBar style="light" />
-    </View>
+      <ScrollView>
+        <View style={styles.container}>
+          <Today covid={covid} />
+          <Chart covid={covid} stats={stats} />
+          <LocalCases covid={covid} />
+          <GlobalCases covid={covid} />
+          <StatusBar style="light" />
+        </View>
+      </ScrollView>
   );
 }
 

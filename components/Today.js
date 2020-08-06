@@ -10,15 +10,15 @@ export default function Today({covid}) {
       <View style={styles.todayContainer}>
         <View style={styles.todayCured}>
           <Text style={styles.text}>Izliječeni</Text>
-          <Text style={styles.textCured}>{covid.curedLocal}</Text>
+          <Text style={styles.textCured}>{covid.curedLocalToday}</Text>
         </View>
         <View style={styles.todayNew}>
           <Text style={styles.text}>Novi</Text>
-          <Text style={styles.textNewCases}>{covid.casesLocal}</Text>
+          <Text style={styles.textNewCases}>{covid.casesLocalToday}</Text>
         </View>
         <View style={styles.todayDeaths}>
           <Text style={styles.text}>Umrli</Text>
-          <Text style={styles.textDeaths}>{covid.deathsLocal}</Text>
+          <Text style={styles.textDeaths}>{covid.deathsLocalToday}</Text>
         </View>
       </View>
     </View>
@@ -28,6 +28,7 @@ export default function Today({covid}) {
 const styles = StyleSheet.create({
   container: {
     alignItems: "center",
+    width: '95%'
   },
   dateText: {
     color: "#F3F3F4",
@@ -43,7 +44,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#171C26",
     flexDirection: "row",
     justifyContent: "space-around",
-    width: "85%",
+    width: "100%",
     borderRadius: 15,
     paddingVertical: 30,
   },
