@@ -8,7 +8,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#252A48"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -18,6 +18,13 @@
     ],
     "ios": {
       "supportsTablet": true
+    },
+    "android": {
+      "package": "com.celio.covid19",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#252A48"
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"
