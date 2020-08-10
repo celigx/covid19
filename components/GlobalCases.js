@@ -40,7 +40,8 @@ const styles = StyleSheet.create({
   },
   containerCases: {
     flexDirection: "row",
-    justifyContent: "space-around",
+    justifyContent: "space-between",
+    paddingHorizontal: 20
   },
   textTitle: {
     color: "#F3F3F4",
