@@ -1,7 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, View, ScrollView, RefreshControl } from 'react-native';
+import { StyleSheet, View, ScrollView, RefreshControl, Text } from 'react-native';
 import Constants from "expo-constants";
+import * as SplashScreen from 'expo-splash-screen';
 import Today from './components/Today';
 import Chart from './components/Chart';
 import GlobalCases from "./components/GlobalCases";
@@ -31,8 +32,10 @@ export default function App() {
     seven: ''
   })
   const [refresh, setRefresh] = useState(false)
+  // const [appIsReady, setAppIsReady] = useState(false)
 
   useEffect(() => {
+    SplashScreen.preventAutoHideAsync()
     fetchData()
   }, [])
 
@@ -61,6 +64,7 @@ export default function App() {
           six: data[7].SlucajeviHrvatska - data[8].SlucajeviHrvatska,
           seven: data[8].SlucajeviHrvatska - data[9].SlucajeviHrvatska,
         });
+        SplashScreen.hideAsync()
       });
   };
 
@@ -69,19 +73,19 @@ export default function App() {
   }
 
   return (
-      <ScrollView
-        refreshControl={
-          <RefreshControl refreshing={refresh} onRefresh={onRefresh} />
-        }
-      >
-        <View style={styles.container}>
-          <Today covid={covid} />
-          <Chart covid={covid} stats={stats} />
-          <LocalCases covid={covid} />
-          <GlobalCases covid={covid} />
-          <StatusBar style="light" />
-        </View>
-      </ScrollView>
+    <ScrollView
+      refreshControl={
+        <RefreshControl refreshing={refresh} onRefresh={onRefresh} />
+      }
+    >
+      <View style={styles.container}>
+        <Today covid={covid} />
+        <Chart covid={covid} stats={stats} />
+        <LocalCases covid={covid} />
+        <GlobalCases covid={covid} />
+        <StatusBar style="light" />
+      </View>
+    </ScrollView>
   );
 }
 
