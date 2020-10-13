@@ -32,7 +32,6 @@ export default function App() {
     seven: ''
   })
   const [refresh, setRefresh] = useState(false)
-  // const [appIsReady, setAppIsReady] = useState(false)
 
   useEffect(() => {
     SplashScreen.preventAutoHideAsync()
