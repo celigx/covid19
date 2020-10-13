@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, View, ScrollView } from 'react-native';
+import { StyleSheet, View, ScrollView, RefreshControl } from 'react-native';
 import Constants from "expo-constants";
 import Today from './components/Today';
 import Chart from './components/Chart';
@@ -30,6 +30,7 @@ export default function App() {
     six: '',
     seven: ''
   })
+  const [refresh, setRefresh] = useState(false)
 
   useEffect(() => {
     fetchData()
@@ -63,8 +64,16 @@ export default function App() {
       });
   };
 
+  const onRefresh = () => {
+    fetchData();
+  }
+
   return (
-      <ScrollView>
+      <ScrollView
+        refreshControl={
+          <RefreshControl refreshing={refresh} onRefresh={onRefresh} />
+        }
+      >
         <View style={styles.container}>
           <Today covid={covid} />
           <Chart covid={covid} stats={stats} />
